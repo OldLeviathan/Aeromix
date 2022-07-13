@@ -1,0 +1,56 @@
+.main{
+	margin-top: 100px;
+	background:url(/img/detailed_line.png)0px 500px no-repeat, url(/img/orange_line.png)0px 800px no-repeat;
+	background-size: 100% auto;
+}
+
+//=====================================================================================================
+
+/* Устроства с маленьким экраном (планшеты, 768px) */
+@media (max-width: 768px) {
+	.detailed{
+		display: table;
+		margin: auto;
+	}
+	.detailed_social{
+		display: none;
+	}
+	.detailed_image{
+		display: table-header-group;
+		background: none;
+	}
+	.detailed_info{
+		display:table-footer-group;
+		text-align: center;
+		margin: auto;
+	}
+
+}
+/* Устройства со средним экраном (ноутбуки и компьютеры, 992px) */
+@media (max-width: 992px) {
+	.detailed{
+		margin: auto;
+	}
+
+	.detailed_social{
+		display: none;
+	}
+	.detailed_title{
+		margin-top: 0px;
+	}
+
+}
+/* Устройства с большим экраном (компьютеры, 1200px) */
+@media (max-width: 1200px) {
+
+}
+@media (min-width: 768px) {
+	.detailed_hidden_photo{
+		display: none;
+	}
+	.detailed_image{
+		.detailed_image{
+			background: url('/img/detailed_photo_small.png') 0 0/auto 100% no-repeat;	
+		}
+	}
+}

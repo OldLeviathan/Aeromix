@@ -1,0 +1,83 @@
+.news{
+	margin-top: 150px;
+	margin-left: 150px;
+	margin-bottom: 150px;
+	&_title{
+		font-size: 42px;
+    	font-weight: 800;
+    	line-height: 50px;
+	}
+	&_blocks{
+		margin-top: 50px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;		
+	}
+	&_block{
+		padding: 40px;
+		box-shadow: 0px 0px 8px 3px rgba(34, 60, 80, 0.2);
+		background-color: #fff;
+		border-radius: 10px;
+		max-width: 90%;
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		&_image{
+			margin-left: 10px;
+			box-shadow: 0px 0px 8px 3px rgba(34, 60, 80, 0.2);
+			border-radius: 10px;
+		}
+		&_text{
+			&_simple{
+				line-height: 1.5;
+				font-size: 20px;
+   				margin: 15px 0 0;
+			}
+			&_title{
+				line-height: 1;
+				font-size: 24px;
+    			font-weight: 700;
+			}
+		}
+	}
+}
+.lady{
+	box-shadow: none;
+	border-radius: 0px;
+}
+
+//=====================================================================================================
+
+/* Устроства с маленьким экраном (планшеты, 768px) */
+@media (max-width: 768px) {
+	.news{
+		margin: 30px 0 0 0;
+	}
+	.news_block{
+		max-width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	.news_block_text{
+		margin-bottom: 10px;
+	}
+	.container{
+		max-width: 100%;
+	}
+}
+/* Устройства со средним экраном (ноутбуки и компьютеры, 992px) */
+@media (max-width: 992px) {
+
+}
+/* Устройства с большим экраном (компьютеры, 1200px) */
+@media (max-width: 1200px) {
+	.news_blocks{
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+	.news_block{
+		margin-bottom: 30px;
+	}
+}
+@media (min-width: px) {
+	
+}

@@ -1,0 +1,110 @@
+//====================================================================================================
+.header{
+	position: fixed;
+	width: 100%;
+	height: 90px;
+	background-image: linear-gradient(45deg,#F9E74B, #F9A425);
+	-webkit-box-shadow: 0px 12px 8px 0px rgba(34, 60, 80, 0.2);
+	-moz-box-shadow: 0px 12px 8px 0px rgba(34, 60, 80, 0.2);
+	box-shadow: 0px 12px 8px 0px rgba(34, 60, 80, 0.2);
+	&_row{
+		width: 100%;
+		height: 90px;
+		display: grid;
+		grid-template-columns: 2fr 1fr 2fr;
+	}
+	&_contacts{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		margin-top: 30px;
+		margin-left: 60px;
+	}
+	&_logo{
+		justify-self: center;
+		align-self: center;
+	}
+}
+
+.contacts_adress{
+	display: flex;	
+}
+.contacts_phone{
+	display: flex;
+}
+.phone_icon{
+	height: 27px;
+	width: 27px;
+}
+.header_nav{
+	margin-top: 30px;
+	margin-right: 80px;
+	justify-self: center;
+}
+.nav_list{
+	display: flex;
+	justify-items: space-between;
+}
+.nav_item{
+	margin-left: 20px;
+	color: #000;
+}
+
+/* Устроства с маленьким экраном (планшеты, 768px) */
+@media (max-width: 768px) {		
+		.header_row{
+			grid-template-columns: none;
+		}
+		.header_contacts{
+			display: none;
+		}
+		.header_logo{
+			justify-self: left;
+		}		
+	}
+	
+	/* Устройства со средним экраном (ноутбуки и компьютеры, 992px) */
+	@media (max-width: 992px) {
+		.header{
+			height: 70px;
+		}
+		.header_nav{
+			display: none;
+		}
+		.header_contacts{
+			grid-template-columns: none;
+		}
+		.contacts_adress{
+			display: none;	
+		}
+	}
+	
+	/* Устройства с большим экраном (компьютеры, 1200px) */
+	@media (max-width: 1200px) {
+		
+	}
+	@media (min-width: 992px){
+		.header_menu{
+			display: none;
+		}
+
+	}
+	.icon-menu{
+		display: block;
+		position: absolute;
+		top: 18px;
+		right: 10px;
+		width:30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+		span{@include anim(0.3s,0s);top: 8px;left: 0px;position: absolute;width: 100%;height: 2px;background-color: #000;
+			&:first-child{top: 0px;}
+			&:last-child{top: auto;bottom: 0px;}
+		}
+		&.active{
+			span{@include scale(0);
+				&:first-child{@include rotate(-45deg);top: 8px;}
+				&:last-child{@include rotate(45deg);bottom: 8px;}
+			}
+		}
+	}
